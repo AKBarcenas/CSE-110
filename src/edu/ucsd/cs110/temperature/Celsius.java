@@ -1,6 +1,5 @@
 package edu.ucsd.cs110.temperature;
 
-import com.sun.xml.internal.org.jvnet.fastinfoset.sax.FastInfosetReader;
 
 /**
  * Created by cs110xmatt on 3/11/16.
