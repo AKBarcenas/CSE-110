@@ -1,10 +1,3 @@
-package edu.ucsd.cs110.temperature;
-
-import static org.junit.Assert.*;
-
-/**
- * Created by alex on 4/24/16.
- */
 package edu.ucsd.cs110.temperature; import static org.junit.Assert.*; import org.junit.Test;
 public class CelsiusTest {
     private float delta = 0.001f;
@@ -16,11 +9,16 @@ public class CelsiusTest {
     @Test
     public void testCelsiusToString(){
         float value = 12.34f;
-        Celsius temp = new Celsius(value); String string = temp.toString();
-        String beginning = "" + value; String ending = " C";
-// Verify the suffix of the formatted string assertTrue(string.startsWith(beginning));
-// Verify the prefix of the formatted string assertTrue(string.endsWith(ending));
-// Verify the middle of the formatted string int endIndex = string.indexOf(ending);
+        Celsius temp = new Celsius(value);
+        String string = temp.toString();
+        String beginning = "" + value;
+        String ending = " C";
+// Verify the suffix of the formatted string
+        assertTrue(string.startsWith(beginning));
+// Verify the prefix of the formatted string
+        assertTrue(string.endsWith(ending));
+// Verify the middle of the formatted string
+        int endIndex = string.indexOf(ending);
 // (Hint: what is the length of the middle of the string?)
         assertTrue(string.substring(0, endIndex).equals(beginning)); }
     @Test

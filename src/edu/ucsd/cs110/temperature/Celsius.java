@@ -1,5 +1,7 @@
 package edu.ucsd.cs110.temperature;
 
+import com.sun.xml.internal.org.jvnet.fastinfoset.sax.FastInfosetReader;
+
 /**
  * Created by cs110xmatt on 3/11/16.
  */
@@ -12,18 +14,18 @@ public class Celsius extends Temperature {
 
     @Override
     public Temperature toCelsius() {
-        return null;
+        return this;
     }
 
     @Override
     public Temperature toFahrenheit() {
-        return null;
+        return new Fahrenheit(this.getValue() * 9 / 5 + 32);
     }
 
 
     public String toString()
         {
             // TODO: Complete this method
-            return this.getValue() + "";
+            return this.getValue() + " C";
         }
 }
